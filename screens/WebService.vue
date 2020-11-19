@@ -3,7 +3,7 @@
     <text>Nombre de usuario Github</text>
     <text-input
         class="input"
-        v-model="username"
+        v-model="usernameInput"
       />
     <button
         class="search-btn"
@@ -52,6 +52,7 @@ export default {
       baseUrl: "https://api.github.com",
       gotUserSuccess: false,
       username: "",
+      usernameInput: "",
       repos_url: "",
       name: "",
       num_repos: 0,
@@ -67,7 +68,7 @@ export default {
   },
   methods: {
     getGithubUser(){
-      var requestUrl = `${this.baseUrl}/users/${this.username}`;
+      var requestUrl = `${this.baseUrl}/users/${this.usernameInput}`;
 
       let config = {
         headers: {
@@ -90,6 +91,7 @@ export default {
     },
     setUserData(res){
         this.name = res.data.name;
+        this.username = res.data.login;
         this.num_repos = res.data.public_repos;
         this.avatar_url = res.data.avatar_url;
         this.repos_url = res.data.repos_url;

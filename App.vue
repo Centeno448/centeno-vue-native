@@ -12,10 +12,12 @@ import {
 import HomeScreen from "./screens/Home.vue";
 import CameraScreen from "./screens/Camera.vue";
 import WebService from "./screens/WebService.vue";
+import LocalStorage from "./screens/Storage.vue";
 
 const Tabs = createMaterialTopTabNavigator({
   Home: HomeScreen,
-  ServicioWeb: WebService
+  ServicioWeb: WebService,
+  Storage: LocalStorage
 });
 
 const StackNavigator = createStackNavigator(
