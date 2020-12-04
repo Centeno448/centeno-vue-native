@@ -36,7 +36,7 @@ export default {
         latitudeDelta: 0.1,
         longitudeDelta: 0.05
       },
-      apiKey: "802371203359246534665x6018",
+      apiKey: "447459354258060371293x114015",
       locationText: ""
     };
   },
